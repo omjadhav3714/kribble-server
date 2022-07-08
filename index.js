@@ -43,7 +43,7 @@ io.on('connection', (socket) => {
                 isPartyLeader: true,
             }
             room.players.push(player);
-            room = await rooom.save();
+            room = await room.save();
             io.to(name).emit('updateRoom', room);
         }
         catch (err) {
